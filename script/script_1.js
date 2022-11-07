@@ -1,6 +1,6 @@
 // 1) сформировать массив, который содержит все названия продуктов
 
-const get_products = async () => {
+const get_info = async () => {
     const response = await fetch('https://fakestoreapi.com/products');
     const products = await response.json();
     // Solution method 1
@@ -10,4 +10,5 @@ const get_products = async () => {
     const result = products.reduce((titles, {title}) => [...titles, title], [])
     console.log(result)
 }
-get_products();
+get_info();
+
